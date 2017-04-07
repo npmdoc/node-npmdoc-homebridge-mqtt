@@ -1,0 +1,311 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/cflurin/homebridge-mqtt#readme">homebridge-mqtt (v0.4.2)</a>
+</h1>
+<h4>MQTT Plugin for Homebridge</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-mqtt">module homebridge-mqtt</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-mqtt.</span>accessory</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-mqtt.</span>controller</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-mqtt.</span>model</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-mqtt.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-mqtt.accessory">module homebridge-mqtt.accessory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-mqtt.accessory.Accessory">
+            function <span class="apidocSignatureSpan">homebridge-mqtt.accessory.</span>Accessory
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-mqtt.controller">module homebridge-mqtt.controller</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-mqtt.controller.Controller">
+            function <span class="apidocSignatureSpan">homebridge-mqtt.controller.</span>Controller
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-mqtt.model">module homebridge-mqtt.model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-mqtt.model.Model">
+            function <span class="apidocSignatureSpan">homebridge-mqtt.model.</span>Model
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-mqtt.utils">module homebridge-mqtt.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-mqtt.utils.Utils">
+            function <span class="apidocSignatureSpan">homebridge-mqtt.utils.</span>Utils
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-mqtt" id="apidoc.module.homebridge-mqtt">module homebridge-mqtt</a></h1>
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-mqtt.accessory" id="apidoc.module.homebridge-mqtt.accessory">module homebridge-mqtt.accessory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-mqtt.accessory.Accessory" id="apidoc.element.homebridge-mqtt.accessory.Accessory">
+        function <span class="apidocSignatureSpan">homebridge-mqtt.accessory.</span>Accessory
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Accessory(params) {
+
+  this.log = params.log;
+  Service = params.Service;
+  Characteristic = params.Characteristic;
+  platform_name = params.platform_name;
+  get = params.get;
+  set = params.set;
+  identify = params.identify;
+
+  this.name;          // assigned by this.configureAccessory
+
+  this.i_value = {};
+  this.i_label = {};
+  this.i_props = {};
+
+  this.reachable = true;
+
+  this.services = {};
+  this.service_types = {};
+  this.service_names = {};
+  this.service_namesList = [];
+
+  this.set_timeout;
+  this.prec_c;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-mqtt.controller" id="apidoc.module.homebridge-mqtt.controller">module homebridge-mqtt.controller</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-mqtt.controller.Controller" id="apidoc.element.homebridge-mqtt.controller.Controller">
+        function <span class="apidocSignatureSpan">homebridge-mqtt.controller.</span>Controller
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Controller(params) {
+
+  config = params.config;
+  this.log = params.log;
+  plugin_name = params.plugin_name;
+  plugin_version = params.plugin_version;
+  platform_name = params.platform_name;
+  api = params.api;
+  HapAccessory = params.HapAccessory;
+  Service = params.Service;
+  Characteristic = params.Characteristic;
+  UUIDGen = params.UUIDGen;
+
+  this.accessories = {};
+  this.hap_accessories = {};
+
+  var model_parameters = {
+    "config": config,
+    "log": this.log,
+    "plugin_name": plugin_name,
+    "Characteristic": Characteristic,
+    "addAccessory": this.addAccessory.bind(this),
+    "addService": this.addService.bind(this),
+    "removeAccessory": this.removeAccessory.bind(this),
+    "removeService": this.removeService.bind(this),
+    "setValue": this.setValue.bind(this),
+    "getAccessories": this.getAccessories.bind(this),
+    "updateReachability": this.updateReachability.bind(this),
+    "setAccessoryInformation": this.setAccessoryInformation.bind(this)
+  };
+
+  this.createModel(model_parameters);
+
+  accessory_parameters = {
+    "log": this.log,
+    "platform_name": platform_name,
+    "Service": Service,
+    "Characteristic": Characteristic,
+    "get": this.get.bind(this),
+    "set": this.set.bind(this),
+    "identify": this.identify.bind(this)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-mqtt.model" id="apidoc.module.homebridge-mqtt.model">module homebridge-mqtt.model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-mqtt.model.Model" id="apidoc.element.homebridge-mqtt.model.Model">
+        function <span class="apidocSignatureSpan">homebridge-mqtt.model.</span>Model
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Model(params) {
+
+  this.config = params.config;
+  this.log = params.log;
+  plugin_name = params.plugin_name;
+  Characteristic = params.Characteristic;
+
+  addAccessory = params.addAccessory;
+  addService = params.addService;
+  removeAccessory = params.removeAccessory;
+  removeService = params.removeService;
+  setValue = params.setValue;
+  getAccessories = params.getAccessories;
+  updateReachability = params.updateReachability;
+  setAccessoryInformation = params.setAccessoryInformation;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-mqtt.utils" id="apidoc.module.homebridge-mqtt.utils">module homebridge-mqtt.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-mqtt.utils.Utils" id="apidoc.element.homebridge-mqtt.utils.Utils">
+        function <span class="apidocSignatureSpan">homebridge-mqtt.utils.</span>Utils
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Utils() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
