@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-mqtt.homebridge-mqtt">
+            function <span class="apidocSignatureSpan"></span>homebridge-mqtt
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-mqtt.</span>accessory</span>
 
         </li>
@@ -143,6 +152,30 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.homebridge-mqtt" id="apidoc.module.homebridge-mqtt">module homebridge-mqtt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-mqtt.homebridge-mqtt" id="apidoc.element.homebridge-mqtt.homebridge-mqtt">
+        function <span class="apidocSignatureSpan"></span>homebridge-mqtt
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">homebridge-mqtt = function (homebridge) {
+  console.log(&#x22;homebridge API version: &#x22; + homebridge.version);
+
+  HapAccessory = homebridge.platformAccessory;
+
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+  UUIDGen = homebridge.hap.uuid; // Universally Unique IDentifier
+  storagePath = homebridge.user.storagePath();
+
+  homebridge.registerPlatform(plugin_name, platform_name, PluginPlatform, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
 
